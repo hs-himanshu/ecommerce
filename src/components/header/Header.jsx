@@ -10,6 +10,8 @@ import { FaUser } from "react-icons/fa";
 import { useDispatch } from 'react-redux';
 import {SET_ACTIVE_USER, REMOVE_ACTIVE_USER} from "../../redux/slice/authSlice";
 import ShowOnLogin, { ShowOnLogout } from '../hiddenLink/hiddenLink';
+import { AdminOnlyLink } from '../adminOnlyRout/AdminOnlyRoute';
+
 
 const logo = (
     <div className={styles.logo}>
@@ -82,6 +84,13 @@ const Header = () => {
                     </li>
                     <li>
                         <NavLink to="/contact" className={({isActive})=> isActive ?`${styles.active}`:"" }>Contact Us</NavLink>
+                    </li>
+                    <li>
+                        <AdminOnlyLink>
+                            <Link to="/admin/home">
+                                <button className={styles.adminButton}>Admin</button>
+                            </Link>
+                        </AdminOnlyLink>
                     </li>
                 </ul>
                 <div className={styles.headerRight}>
