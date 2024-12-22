@@ -4,11 +4,13 @@ import './App.css';
 import {Header,Footer} from "./components"
 //pages
 import {Home,Contact,Login,Register,Reset} from "./pages/index"
+import { ToastContainer, toast } from 'react-toastify';
 
 function App() {
   return (
     <>
       <BrowserRouter>
+      <ToastContainer/>
         <Header />
           <Routes>
             <Route path='/' element={<Home />} />

@@ -3,10 +3,11 @@ import styles from "./auth.module.css"
 import Card from "../../components/card/Card"
 import { Link, useNavigate } from 'react-router-dom'
 import registerImg from "../../assets/register.png"
-import { ToastContainer, toast } from 'react-toastify';
+
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import {auth} from "../../firebase/config"
 import { Loader } from '../../components'
+import { toast } from 'react-toastify'
 
 const Register = () => {
   const [email,setEmail] = useState("");
@@ -42,7 +43,6 @@ const Register = () => {
 
   return (
     <>
-    <ToastContainer />
     {isLoading && <Loader />}
     <div className={styles.container}>
       <Card>
