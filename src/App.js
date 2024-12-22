@@ -3,7 +3,7 @@ import './App.css';
 //components
 import {Header,Footer} from "./components"
 //pages
-import {Home,Contact} from "./pages/index"
+import {Home,Contact,Login,Register,Reset} from "./pages/index"
 
 function App() {
   return (
@@ -13,6 +13,9 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/contacts' element={ <Contact />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
+            <Route path='/reset' element={<Reset />} />
           </Routes>
         <Footer />
       

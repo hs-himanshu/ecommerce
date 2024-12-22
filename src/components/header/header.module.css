@@ -2,6 +2,8 @@ header{
     width: 100%;
     background-color: var(--header-color);
     color: #ffffff;
+    position: sticky;
+    top:0;
 }
 .header{
     width: 100%;
@@ -10,6 +12,8 @@ header{
     align-items: center;
     justify-content: center;
     position: relative;
+    color: white;
+    font-size: 1.3rem;
     grid-template-columns: 10rem 1fr;
 }
 .logo{
